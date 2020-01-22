@@ -45,7 +45,7 @@ EOF
 }
 
 # X and window manager related packages
-PKGS_X="xorg-x11-server-Xorg xorg-x11-xinit xorg-x11-xauth dbus-x11 enlightenment"
+PKGS_X="xorg-x11-server-Xorg xorg-x11-xinit xorg-x11-xauth dbus-x11 xorg-x11-drv-fbdev enlightenment"
 
 # desktop applications and other utilities
 PKGS_APPS="terminator firefox git bc screenfetch"
@@ -54,7 +54,7 @@ PKGS_APPS="terminator firefox git bc screenfetch"
 # TODO:
 # 	- new version with bug fixes
 #	- submit to fedora repositories
-PKGS_GPIO="https://github.com/underground-software/python3-libgpiod-rpi/releases/download/v0.1/python3-libgpiod-rpi-0.1-1.aarch64.rpm"
+PKGS_GPIO="https://github.com/underground-software/python3-libgpiod-rpi/releases/download/v0.2/python3-libgpiod-rpi-0.2-2.aarch64.rpm"
 
 # useful libraries: right now this just enables audio
 PKGS_LIBS="alsa-plugins-pulseaudio"
@@ -124,6 +124,7 @@ echo "exec enlightenment_start" >> $RPIHOME/.xinitrc || die_at "add enlighement_
 
 cat <<-EOF
 	=== setup script completed with success ===
+	=== please logout and login as user rpi ===
 	====== to start the GUI, run: startx ======
 EOF
 
