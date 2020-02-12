@@ -4,7 +4,7 @@ from influxdb import InfluxDBClient
 dbclient = InfluxDBClient('0.0.0.0', 8086, 'root', 'root', 'mydb')
 
 #database query
-query = 'select mean("value") from "light"'
+query = 'select mean("value") from "test"'
 
 #make query
 result = dbclient.query(query)
